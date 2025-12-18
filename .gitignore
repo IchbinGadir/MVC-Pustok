@@ -1,0 +1,75 @@
+############################
+# Visual Studio / .NET
+############################
+
+## Build results
+[Bb]in/
+[Oo]bj/
+**/[Bb]in/
+**/[Oo]bj/
+
+## User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+## IDE folders
+.vs/
+.vscode/
+.idea/
+
+## Build logs
+*.log
+
+## NuGet
+*.nupkg
+# packages/   # (əgər packages folder istifadə edirsənsə aç)
+
+## Rider
+*.DotSettings.user
+
+############################
+# OS files
+############################
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+############################
+# Environment / Secrets
+############################
+
+.env
+.env.*
+
+############################
+# Temporary files
+############################
+
+*.tmp
+*.temp
+*.bak
+*.swp
+*.orig
+
+############################
+# Test / Coverage
+############################
+
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+############################
+# Publish
+############################
+
+publish/

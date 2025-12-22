@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace Sinif_taski
 {
     public class Program
@@ -6,7 +8,21 @@ namespace Sinif_taski
         {
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddControllersWithViews();
+           
+            builder.Services.AddDbContext<DAL.AppDbContext>
+            (
+                options =>
+                {
+                    options.UseSqlServer("Server=localhost;Database=APA201PustrokDb;Trusted_Connection=true;Encrypt=false");
+                }
+            );
+
+
+
             var app = builder.Build();
+
+
+
             app.UseStaticFiles();
             app.MapControllerRoute
             (

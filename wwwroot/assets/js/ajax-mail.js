@@ -135,7 +135,7 @@ Author: Siddharth Doshi
                     url: url,
                     data: data,
                     success: successCallback,
-                    dataType: "jsonp",
+                    dataType: "~/admin/js/onp",
                     error: function(resp, text) {
                         console.log("mailchimp ajax submit error: " + text)
                     }

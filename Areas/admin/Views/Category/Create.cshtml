@@ -1,0 +1,26 @@
+﻿
+@using Sinif_taski.Models
+@model Category
+<div class="row">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Add Slide</h4>
+                <form class="forms-sample" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="Photo">Image</label>
+                        <input asp-for="ImageFile" class="form-control" placeholder="Image">
+                        <span asp-validation-for="ImageFile" style="color: red"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Title">Title</label>
+                        <input asp-for="Name" class="form-control" placeholder="Title">
+                        <span asp-validation-for="Name" style="color: red"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    <button class="btn btn-light">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

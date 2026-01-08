@@ -1,0 +1,17 @@
+﻿@using Sinif_taski.Models
+@model Product
+
+<div class="card">
+    <div class="card-header">
+        <h4>Product Details</h4>
+    </div>
+
+    <div class="card-body">
+        <p><b>ID:</b> @Model.Id</p>
+        <p><b>Name:</b> @Model.Marka</p>
+    </div>
+
+    <div class="card-footer text-end">
+        <a asp-action="Index" class="btn btn-secondary">Back</a>
+    </div>
+</div>

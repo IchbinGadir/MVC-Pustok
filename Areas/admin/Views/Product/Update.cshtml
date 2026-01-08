@@ -1,0 +1,22 @@
+﻿
+@using Sinif_taski.Models
+@model Product
+<div class="row">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Update Product</h4>
+                <form class="forms-sample" method="post">
+                    <div class="form-group">
+                        <label for="exampleInputName1">Name</label>
+                        <input asp-for="Marka" type="text" class="form-control" placeholder="Name">
+                        <span asp-validation-for="Marka" style="color: red"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    <button class="btn btn-light">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

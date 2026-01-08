@@ -1,7 +1,6 @@
 ﻿
-
 @using Sinif_taski.Models
-@model List<Category>
+@model List<Product>
 @{
     int count = 0;
 }
@@ -15,7 +14,7 @@
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Products Table</h6>
         </div>
-        <a asp-controller="category" a asp-action="Create" class="btn btn-success">Add Category</a>
+        <a asp-controller="product" a asp-action="Create" class="btn btn-success">Add product </a>
         <div class="card-body">
             <div class="table-responsive">
 
@@ -33,26 +32,26 @@
 
                     <tbody>
                         <!-- Product 1 -->
-                        @foreach (Category category in Model)
+                        @foreach (Product product in Model)
                         {
                             count++;
                             <tr>
 
                                 <td>@count</td>
                                 <td>
-                                    <img src="~/assets/image/bg-images/@category.ImageUrl" alt="" width="120"
+                                    <img src="~/assets/image/products/@product.Image" alt="" width="120"
                                          height="80" />
                                 </td>
-                                <td class="fw-semibold text-dark">@category.Name</td>
+                                <td class="fw-semibold text-dark">@product.Marka</td>
 
                                 <td class="text-center">
-                                    <a asp-area="Admin" asp-controller="Category" asp-action="Details"  asp-route-id="@category.Id" class="btn btn-primary btn-circle btn-lg">
+                                    <a asp-area="Admin" asp-controller="Product" asp-action="Details" asp-route-id="@product.Id" class="btn btn-primary btn-circle btn-lg">
                                         <i class="fas fa-eye"></i>
                                     </a>
-                                    <a asp-area="Admin" asp-controller="Category" asp-action="update" asp-route-id="@category.Id" class="btn btn-warning btn-circle btn-lg">
+                                    <a asp-area="Admin" asp-controller="Product" asp-action="update" asp-route-id="@product.Id" class="btn btn-warning btn-circle btn-lg">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <a asp-area="Admin" asp-controller="Category" asp-action="delete" asp-route-id="@category.Id" class="btn btn-danger btn-circle btn-lg">
+                                    <a asp-area="Admin" asp-controller="Product" asp-action="delete" asp-route-id="@product.Id" class="btn btn-danger btn-circle btn-lg">
                                         <i class="fas fa-trash"></i>
                                     </a>
                                 </td>

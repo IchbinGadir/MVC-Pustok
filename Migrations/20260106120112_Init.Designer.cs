@@ -11,7 +11,7 @@ using Sinif_taski.DAL;
 namespace Sinif_taski.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251222102757_Init")]
+    [Migration("20260106120112_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -23,6 +23,26 @@ namespace Sinif_taski.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("Sinif_taski.Models.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+                });
 
             modelBuilder.Entity("Sinif_taski.Models.FeatureProduct", b =>
                 {

@@ -1,4 +1,6 @@
-﻿namespace Sinif_taski.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Sinif_taski.Models
 {
     public class Product
     {
@@ -7,7 +9,10 @@
         public string Model { get; set; }
         public double Price { get; set; }
         public double OldPrice { get; set; }
+        public string Title { get; set; }
         public string Discount { get; set; }
-        public string Image { get; set; }
+        public string? Image { get; set; }
+        [NotMapped]
+        public IFormFile? Photo { get; set; }
     }
 }

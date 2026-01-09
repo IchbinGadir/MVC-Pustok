@@ -81,7 +81,9 @@ namespace Sinif_taski.Areas.admin.Controllers
                 Order = createProductVM.Order,
                 Image = fileName,
                 Marka = createProductVM.Marka,
-                Model = createProductVM.Model
+                Model = createProductVM.Model,
+                Price = createProductVM.Price,
+                OldPrice = createProductVM.OldPrice
             };
 
 
@@ -178,6 +180,8 @@ namespace Sinif_taski.Areas.admin.Controllers
             product.Order = updateProductVM.Order;
             product.Marka = updateProductVM.Marka;
             product.Model = updateProductVM.Model;
+            product.Price = updateProductVM.Price;
+            product.OldPrice = updateProductVM.OldPrice;
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

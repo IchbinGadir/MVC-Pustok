@@ -11,6 +11,7 @@ namespace Sinif_taski.Models
         public double OldPrice { get; set; }
         public string Title { get; set; }
         public string Discount { get; set; }
+        public int Order { get; set; }
         public string? Image { get; set; }
         [NotMapped]
         public IFormFile? Photo { get; set; }
